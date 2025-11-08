@@ -1,29 +1,3 @@
-# 💼 Sales Insight Agent
-
-An AI-powered interactive web application that helps business owners and analysts understand their sales data through natural language questions.  
-Built using **Flask**, **Google Gemini 2.5 Pro**, and **Chart.js**, it provides intelligent summaries, visual insights, and dynamic responses — all in one clean interface.
-
----
-
-## 🚀 Features
-
-✅ Conversational Q&A interface (ask in plain English)  
-✅ Smart intent detection (Top items / Revenue / Trends / Comparisons)  
-✅ Real-time AI explanations powered by **Gemini 2.5 Pro**  
-✅ Beautiful interactive bar charts (Chart.js)  
-✅ Lottie animation for a modern, branded look  
-✅ Dynamic chip suggestions (recent queries saved via `localStorage`)  
-✅ Responsive and elegant UI
-
----
-
-## ⚙️ Setup Instructions
-
-### 1️⃣ Clone or Extract the Project
-```bash
-git clone [https://github.com/<your-username>/sales-insight-agent.git](https://github.com/Rohithguru05/Sales-Insight-Agent-Assessment.git)
-cd sales-insight-agent
-```
 # Sales Insight Agent
 
 This project is a Sales Insight Agent, a web application that uses a large language model (LLM) to provide contextual, AI-driven responses, charts, and metrics based on natural language queries about sales data.
@@ -106,7 +80,7 @@ Start the application using the Python interpreter:
 python app.py
 ```
 
-T
+
 
 ## 💬 Example Queries
 
@@ -157,3 +131,14 @@ The following technologies and design choices were made to build the Sales Insig
 *   **Lottie animation** enhances the UI aesthetics.
 *   **Persistent chips** keep recent user questions for good user  experience.
 *   **Styling** uses a Responsive Gradient UI with animations.
+
+## Reflection
+
+### Most challenging aspect:
+The hardest part was ensuring Gemini’s AI responses aligned perfectly with user intent. It required balancing natural language generation with accurate data parsing and aggregation from JSON-based sales data. Integrating contextual question understanding (like "compare this week vs last week") was also tricky.
+
+### What would you improve:
+If I had more time, I’d add authentication for multiple merchants, support live data streams (not static JSON), and include more visualizations like line charts and category-based breakdowns. A voice input feature would also make it more interactive.
+
+### Interesting decisions:
+A key decision was to make the UI and backend both intent-aware. Instead of dumping all data every time, the system intelligently decides whether to show totals, top products, or trends. Combining Gemini’s narrative output with factual metrics made the experience analytical yet conversational — just like interacting with a real business analyst.
