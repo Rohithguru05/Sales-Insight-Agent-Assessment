@@ -142,3 +142,15 @@ If I had more time, I’d add authentication for multiple merchants, support liv
 
 ### Interesting decisions:
 A key decision was to make the UI and backend both intent-aware. Instead of dumping all data every time, the system intelligently decides whether to show totals, top products, or trends. Combining Gemini’s narrative output with factual metrics made the experience analytical yet conversational — just like interacting with a real business analyst.
+
+
+## Bonus Features Implemented
+
+This project includes all four optional enhancements mentioned in the technical requirements:
+
+| Feature | Description | File(s) |
+| :--- | :--- | :--- |
+| 🧠 Multi-turn Conversations | The app remembers previous user queries and AI responses using Flask session-based memory. This allows natural, context-aware follow-up questions. | `app.py`, `llm_agent.py` |
+| ⚡ Caching API Responses | Reduces API calls by caching recent results for 60 seconds to improve performance and reliability. | `sales_api.py` |
+| 📅 Smart Date Parsing | Natural date terms like “today”, “yesterday”, “last week”, and “this month” are parsed automatically. | `utils.py` |
+| 🧪 Automated Tests | Includes a minimal test suite to verify key routes and ensure the API and frontend logic respond correctly. | |
