@@ -1,0 +1,159 @@
+# 💼 Sales Insight Agent
+
+An AI-powered interactive web application that helps business owners and analysts understand their sales data through natural language questions.  
+Built using **Flask**, **Google Gemini 2.5 Pro**, and **Chart.js**, it provides intelligent summaries, visual insights, and dynamic responses — all in one clean interface.
+
+---
+
+## 🚀 Features
+
+✅ Conversational Q&A interface (ask in plain English)  
+✅ Smart intent detection (Top items / Revenue / Trends / Comparisons)  
+✅ Real-time AI explanations powered by **Gemini 2.5 Pro**  
+✅ Beautiful interactive bar charts (Chart.js)  
+✅ Lottie animation for a modern, branded look  
+✅ Dynamic chip suggestions (recent queries saved via `localStorage`)  
+✅ Responsive and elegant UI
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone or Extract the Project
+```bash
+git clone [https://github.com/<your-username>/sales-insight-agent.git](https://github.com/Rohithguru05/Sales-Insight-Agent-Assessment.git)
+cd sales-insight-agent
+```
+# Sales Insight Agent
+
+This project is a Sales Insight Agent, a web application that uses a large language model (LLM) to provide contextual, AI-driven responses, charts, and metrics based on natural language queries about sales data.
+
+## 🚀 Getting Started
+
+Follow these steps to set up and run the application locally.
+
+### 1. Project Structure
+
+The project is organized as follows:
+
+```
+sales-insight-agent/
+│
+├── app.py
+├── llm_agent.py
+├── utils.py
+├── sales_api.py
+│
+├── templates/
+│   └── index.html
+│
+├── static/
+│   └── upsales.json
+│
+├── .env.example
+├── requirements.txt
+├── README.md
+└── reflection.md
+```
+
+### 2. Create and Activate a Virtual Environment
+
+**Windows (PowerShell):**
+
+```powershell
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+**Mac/Linux:**
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+The required dependencies are listed below and can be installed using `pip`:
+
+```bash
+pip install -r requirements.txt
+```
+
+**Requirements:**
+
+| Package | Version |
+| :--- | :--- |
+| `Flask` | `3.0.0` |
+| `google-generativeai` | `0.8.3` |
+| `python-dotenv` | `1.0.1` |
+
+### 4. Set Up Environment Variables
+
+Create a `.env` file in your root directory and add your Gemini API key:
+
+```
+GEMINI_API_KEY=your_actual_gemini_api_key_here
+```
+
+(You can refer to `.env.example` for guidance.)
+
+### 5. Run the App
+
+Start the application using the Python interpreter:
+
+```bash
+python app.py
+```
+
+T
+
+## 💬 Example Queries
+
+Try these sample queries in the chat bar:
+
+*   “Top 5 best-selling products today”
+*   “What was our total revenue yesterday?”
+*   “Show me the sales trend for this week”
+*   “Compare this week vs last week”
+*   “Which products performed best in October?”
+
+Each question triggers a contextual AI-driven response with relevant charts and metrics.
+
+## 📊 Example Output
+
+**User:** “Top 5 best-selling products today”
+
+**Agent Response:**
+
+*   Newport Box 100s — 1000 sold ($10,570.00)
+*   McCormick 375ml — 1000 sold ($5,190.00)
+*   Custom Item — 125 sold ($1,278.83)
+*   Red Bull 8.4oz — 90 sold ($269.10)
+*   The Perfect Gift — 80 sold ($1,600.00)
+
+**💡 Insight:** “These five items contributed nearly 45% of today’s total sales.”
+
+## 🧠 Design Decisions and Tech Stack
+
+The following technologies and design choices were made to build the Sales Insight Agent:
+
+| Layer | Technology | Rationale |
+| :--- | :--- | :--- |
+| **Backend** | Python Flask | Chosen for its simplicity and fast API integration. |
+| **AI Model** | Google Gemini 2.5 Pro | Generates context-aware, human-like sales insights. |
+| **Frontend** | HTML, CSS, JavaScript | Standard web technologies. |
+| **Visualization** | Chart.js | Offers clean, dynamic data visualization. |
+| **UI/Aesthetics** | Lottie, Responsive Gradient UI | Lottie animation enhances the UI aesthetics. |
+| **Storage** | Browser localStorage | Used for persistent chips to keep recent user questions for a ChatGPT-style experience. |
+| **Logic** | Intent detection | Ensures the app responds only with relevant sections (top items, trend, or summary). |
+
+**Key Design Decisions:**
+
+*   **Flask** was chosen for its simplicity and fast API integration.
+*   **Gemini 2.5 Pro** generates context-aware, human-like sales insights.
+*   **Intent detection** ensures the app responds only with relevant sections (top items, trend, or summary).
+*   **Chart.js** offers clean, dynamic data visualization.
+*   **Lottie animation** enhances the UI aesthetics.
+*   **Persistent chips** keep recent user questions for good user  experience.
+*   **Styling** uses a Responsive Gradient UI with animations.
